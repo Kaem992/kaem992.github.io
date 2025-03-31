@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* Small mobile First CSS */
+.testimonials-section {
+  padding: 50px 0 100px;
+  background: var(--light-pink-color);
+}
+
+.testimonials-section ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: auto;
+}
+
+.testimonials-section .testimonials {
+  user-select: none;
+  display: flex;
+  padding: 5%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-section .testimonials .user-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 0vh;
+  border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonials .name {
+  margin-top: 1.4vh;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-m);
+}
+
+.testimonials-section .testimonials .feedback {
+  padding-top: 0.5vh;
+  line-height: 2vh;
+  padding-bottom: 4vh;
+}
+
+.testimonials-section .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background: var(--secondary-color);
+}
+
+.testimonials-section .swiper-slide-button {
+  margin-top: -8vh;
+  color: var(--secondary-color);
+  transition: 0.3s ease;
+}
+
+.testimonials-section .swiper-slide-button:hover {
+  color: var(--primary-color);
+}
+
+/* Scoped CSS TO Small Mobile Only */
+@media (max-width: 768px) {
+}
+
+/* Normal Size Mobile and Tablet */
+@media (min-width: 768px) {
+  .testimonials-section .testimonials .feedback {
+    padding-bottom: 0vh;
+  }
+
+  .testimonials-section .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  .testimonials-section .testimonials .feedback {
+    padding-bottom: 0vh;
+  }
+
+  .testimonials-section .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
