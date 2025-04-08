@@ -2,6 +2,9 @@ const navLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
 
+let lastScrollTop = 0;
+const navMenu = document.querySelector(".navbar .nav-menu");
+
 menuOpenButton.addEventListener("click", () => {
   //Toogle Mobile Menu Visibility
   document.body.classList.toggle("show-mobile-menu");
@@ -15,40 +18,17 @@ navLinks.forEach((navLinks) => {
   navLinks.addEventListener("click", () => menuOpenButton.click());
 });
 
-var swiper = new Swiper(".slider-wrapper", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 25, // Fix typo (should be camelCase)
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
 
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    navMenu.classList.add("hide");
+  } else {
+    // Scrolling up
+    navMenu.classList.remove("hide");
+  }
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
-  // Responsive breakpoints
-  breakpoints: {
-    // Small screens
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    // Tablets
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    // Desktop
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 25,
-    },
-  },
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevent negative
 });

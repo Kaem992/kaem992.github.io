@@ -1,0 +1,133 @@
+/* #region Small Mobile First CSS (Portrait by default) */
+
+.hero-section .hero-details .buttons {
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-section .hero-image-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+  padding-top: 15%;
+}
+
+.hero-section .hero-image {
+  min-width: 20vw; /* Adjusts based on viewport width */
+  max-width: 70vw; /* Prevents it from getting too large */
+  height: auto; /* Keeps aspect ratio */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures proper image fit */
+}
+
+.hero-section .hero-details .button{
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--white-color);
+  border-radius: 10px;
+  font-weight: var(--font-weight-medium);
+  background: var(--button-color);
+}
+
+.hero-section .section-content {
+  font-size: var(--font-size-m);
+}
+
+/* #endregion */
+
+/* #region Scoped CSS TO Small Mobile Only */
+@media (max-width: 768px) {
+  .hero-section .section-content {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px 20px;
+    gap: 5vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    color: var(--white-color);
+  }
+
+  .hero-section p {
+    padding-bottom: 10%;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+  .hero-section .section-content {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white-color);
+  }
+
+  .hero-section .hero-image-wrapper {
+    padding-top: 12%;
+  }
+
+  .hero-section .hero-image {
+    max-width: 40vw; /* Adjusts based on viewport width */
+  }
+
+  .hero-section p {
+    padding-bottom: 5vh;
+  }
+}
+/* #endregion */
+
+/* #region Size For Tablet And Desktop */
+
+@media (min-width: 768px) {
+  .hero-section .section-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white-color);
+  }
+
+  .hero-section .hero-details {
+    padding: 10px 26px;
+    border-radius: 10px;
+  }
+
+  .hero-section p {
+    padding-bottom: 8vh;
+  }
+
+  .hero-section .hero-image-wrapper {
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .hero-section .hero-image {
+    width: 90%;
+  }
+
+  .hero-section .hero-details .button {
+    padding: 20px 90px;
+    border: 2px solid transparent;
+    font-weight: var(--font-weight-semibold);
+    border-radius: 22px;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+/* #endregion */
+
+/* #region Only PC and Larger Devices */
+
+@media (min-width: 1024px) {
+  .hero-section .hero-details {
+    font-size: var(--font-size-l);
+  }
+}
+/* #endregion */

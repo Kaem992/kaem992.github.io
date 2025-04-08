@@ -1,0 +1,168 @@
+/* #region Small Mobile First CSS (Portrait by default) */
+.skills-section .section-content {
+  display: flex;
+
+  margin: 10vh 0vw 0vw;
+  padding: 5vh 0vw 0vw;
+  gap: 5vh;
+  flex-direction: column;
+  justify-content: center;
+  /*text-align: center;*/
+  color: var(--white-color);
+}
+
+.skills-section .section-content .skills-section-background {
+  padding-top: 8vh;
+  background-color: rgb(34, 39, 48);
+  border-radius: 50px 50px 0px 0px;
+  padding-bottom: 5vh;
+}
+
+.skills-details h5 {
+  margin-top: 4vh;
+}
+
+.carousel-indicators {
+  list-style-type: none; /* Shows numbers (1, 2, 3...) */
+  display: flex;
+  gap: 5vh;
+  flex-direction: row;
+  justify-content: center;
+  color: var(--green-color);
+  font-size: var(--font-size-l);
+  transition: 0.3s ease;
+
+}
+
+.skills-section .section-content .content-warper {
+  min-height: 65vh;
+  margin: 0vh 10vw 10vw;
+  color: var(--white-color);
+  line-height: 1.8; /* Adds space between lines */
+}
+
+.skills-section .section-content .title {
+  text-align: center;
+  color: var(--green-color);
+}
+
+.skills-section .section-content .ol,
+ul {
+  text-decoration: none;
+  padding-left: 0;
+}
+
+
+.skills-section .section-content .skills-detials {
+  text-decoration: none;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  visibility: hidden;
+}
+
+
+
+
+/* #endregion */
+
+/* #region Scoped CSS TO Small Mobile Only */
+@media (max-width: 768px) {
+  .phone-only {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+/* #endregion */
+
+/* #region Size For Tablet And Desktop */
+@media (min-width: 768px) {
+  .skills-section .section-content {
+    display: flex;
+    margin: 0vh 0vw 0vw;
+    padding: 0vh 10vw 2vw;
+    gap: 3vh;
+    /*text-align: center;*/
+    color: var(--white-color);
+  }
+
+  .skills-section .section-content .title {
+    text-align: left;
+    color: var(--white-color);
+  }
+
+  .skills-section .section-content .skills-detials-box-frist{
+    /*text-align: center;*/
+    min-height: 40vh;
+    color: var(--white-color);
+    border-radius: 50px;
+    font-size: var(--font-size-m);
+    background: rgb(14, 55, 116);
+  }
+
+  .skills-section .section-content .skills-detials-box-second{
+    /*text-align: center;*/
+    min-height: 40vh;
+    color: var(--white-color);
+    border-radius: 50px;
+    font-size: var(--font-size-m);
+    background: rgb(65, 85, 116);
+    width: 30vw
+  }
+
+  .skills-details h5{
+    margin-top: 2.5vh;
+  }
+
+
+  .skills-section .section-content .content-warper {
+    min-height: auto;
+    padding: 4vh;
+    margin: 0vh 0vw 0vw;
+    align-items: center;
+    color: var(--white-color);
+  }
+
+  .skills-section .section-content .skills-detials-col {
+    display: flex;
+    gap: 25vw;
+    width: 50vw;
+  }
+
+  .skills-detials-box-col-warper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    padding-top: 1vw;
+    align-items: center;
+    color: var(--white-color);
+  }
+
+
+
+  .skills-detials-box-col-warper .left-col {
+    flex: 1; /* 1 part */
+    
+  }
+  
+  .skills-detials-box-col-warper .right-col {
+    flex: 2; /* 2 parts – takes more width */
+  }
+
+ 
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+/* #endregion */
+
+/* #region Only PC and Larger Devices */
+
+@media (min-width: 1024px) {
+}
+/* #endregion */

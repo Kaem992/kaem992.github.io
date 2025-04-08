@@ -1,0 +1,105 @@
+/* #region Small Mobile First CSS (Portrait by default) */
+
+/* Menu Bar */
+.menu-bar {
+  width: 1180px;
+  height: 80px;
+  background-color: rgba(141, 141, 141, 0.3); /* 30% opacity */
+  border-radius: 0px 0px 30px 30px; /* Rounded bottom corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the menu horizontally */
+}
+
+/* Menu Items */
+.menu-items {
+  list-style: none;
+  display: flex;
+  gap: 60px; /* Space between items */
+}
+
+/* Menu Links */
+.menu-items li a {
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.menu-items li a:hover {
+  color: var(--green-color)
+}
+
+/* Dropdown Menu */
+.language-dropdown {
+    color: var(--white-color);
+    position: relative;
+    display: inline-block;
+    width: auto; /* Ensure the width is based on the content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    
+    
+}
+
+/* Dropdown Content (Hidden by Default) */
+.language-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(141, 141, 141, 0.8); /* 80% opacity */
+    min-width: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Dropdown Items */
+.language-dropdown-content li {
+    list-style: none;
+}
+
+.language-dropdown-content li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Hover Effect on Dropdown Items */
+.language-dropdown-content li a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Show Dropdown on Hover */
+.language-dropdown:hover .language-dropdown-content {
+    display: block;
+}
+
+
+/* #endregion */
+
+
+/* #region Scoped CSS TO Small Mobile Only */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+/* #endregion */
+
+/* #region Size For Tablet And Desktop */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+
+
+/* #endregion */
+
+/* #region Only PC and Larger Devices */

@@ -1,0 +1,152 @@
+/* #region Small Mobile First CSS (Portrait by default) */
+.work-section .section-content {
+  display: flex;
+  margin: 10vh 0vw 0vw;
+  padding: 5vh 0vw 0vw;
+  gap: 5vh;
+  flex-direction: column;
+  justify-content: center;
+  /*text-align: center;*/
+  color: var(--white-color);
+}
+
+.work-section .section-content .work-section-background {
+  padding-top: 5vh;
+  background-color: rgb(34, 39, 48);
+  border-radius: 50px 50px 0 0;
+  padding-bottom: 1vh;
+}
+
+.work-section .section-content .content-warper {
+  min-height: 68vh;
+  margin: 0vh 10vw 10vw;
+  color: var(--white-color);
+  line-height: 1.8; /* Adds space between lines */
+}
+
+.work-section .inner-content-warper {
+  margin-top: 5vh;
+  color: var(--white-color);
+  line-height: 2.5; /* Adds space between lines */
+}
+
+.work-section .title {
+  text-align: center;
+  color: var(--green-color);
+}
+
+.work-section h3 {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.work-section p {
+  margin-top: 1vh;
+  font-weight: var(--font-weight-medium);
+}
+
+.work-section .button-warper {
+  margin-top: 8.5vh;
+  width: 100%;
+  text-align: center;
+}
+.work-section .button {
+  padding: 10px 26px;
+  border: 2px solid var(--button-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  font-weight: var(--font-weight-medium);
+  background: var(--button-color);
+  transform: 0.3s ease;
+}
+
+
+
+
+
+/* #endregion */
+
+/* #region Scoped CSS TO Small Mobile Only */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+/* #endregion */
+
+/* #region Size For Tablet And Desktop */
+@media (min-width: 768px) {
+  .work-section .section-content {
+    display: flex;
+    margin: 0vh 0vw 0vw;
+    padding: 0vh 10vw 0vw;
+    gap: 3vh;
+    /*text-align: center;*/
+    color: var(--white-color);
+  }
+
+  .work-section .section-content .title {
+    text-align: left;
+    color: var(--white-color);
+  }
+
+  .work-section .section-content .work-detials-box-frist {
+    /*text-align: center;*/
+    min-height: 40vh;
+    color: var(--white-color);
+    border-radius: 50px;
+    font-size: var(--font-size-m);
+    background: rgb(14, 55, 116);
+  }
+
+ 
+
+  .work-section h3 {
+    text-align: left;
+    margin-top: 0vh;
+    margin-left: 0vw;
+    margin-bottom: 2vh;
+  }
+
+  .work-section p {
+    margin-left: 4.5vh;
+    
+  }
+
+
+
+  .work-section .section-content .content-warper {
+    min-height: 60vh;
+    padding: 4vh;
+    margin: 0vh 0vw 0vw;
+    align-items: center;
+    color: var(--white-color);
+  }
+
+  .work-section .inner-content-warper {
+    margin-top: 5vh;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    line-height: 2.5; /* Adds space between lines */
+  }
+  
+  .work-section .button {
+    padding: 20px 90px;
+    border: 2px solid var(--button-color);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  /* if element in Portrait mode broken */
+}
+/* #endregion */
+
+/* #region Only PC and Larger Devices */
+
+@media (min-width: 1024px) {
+}
+/* #endregion */
